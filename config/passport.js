@@ -35,6 +35,9 @@ module.exports = function(passport) {
 					var newUser = new User();
 					newUser.local.email = email;
 					newUser.local.password = newUser.generateHash(password);
+					newUser.local.status = false; // waiting response confirm email
+					newUser.local.type = 1; // User type = guest
+
 
 					// save the user
 					newUser.save(function(err){

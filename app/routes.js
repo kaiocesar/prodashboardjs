@@ -28,7 +28,7 @@ module.exports = function(app, passport) {
 
 	// POST routes
 	app.post('/signup', passport.authenticate('local-signup', {
-		successRedirect : '/dashboard',
+		successRedirect : '/dashboard', //Temporary area "Wait confirmation email"
 		failureRedirect : '/signup',
 		failureFlash    : true
 	}));
